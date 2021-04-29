@@ -1,0 +1,34 @@
+.primary {
+  color: $primary;
+}
+.bg-primary {
+  border-color: $primary;
+  background-color: $primary;
+}
+
+.primary-2 {
+  color: $secondary;
+}
+.bg-primary-2 {
+  border-color: $secondary;
+  background-color: $secondary;
+}
+
+.secondary {
+  color: $secondary;
+}
+.bg-secondary {
+  border-color: $secondary;
+  background-color: $secondary;
+}
+
+.bg-primary,
+.bg-primary-2,
+.bg-secondary,
+.bg-dark,
+.bg-black {
+  color: #fff;
+}
+
+.red { color: #b20000; }
+.green { color: #009000 }

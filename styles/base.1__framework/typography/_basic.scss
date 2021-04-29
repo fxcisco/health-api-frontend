@@ -1,0 +1,52 @@
+h1 { font-size: 3.8rem; }
+h2 { font-size: 3.4rem; }
+h3 { font-size: 3.0rem; }
+h4 { font-size: 2.6rem; }
+h5 { font-size: 2.2rem; }
+h6 { font-size: 1.8rem; }
+p  { font-size: 1.6rem; }
+a  { font-size: 1.6rem; }
+
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+  font-family: inherit;
+  color: inherit;
+}
+
+.t_left   { text-align: left;     }
+.t_center { text-align: center;   }
+.t_right  { text-align: right;    }
+
+
+.fw_200 { font-weight: 200; }
+.fw_300 { font-weight: 300; }
+.fw_400 { font-weight: 400; }
+.fw_500 { font-weight: 500; }
+.fw_600 { font-weight: 600; }
+.fw_700 { font-weight: 700; }
+.fw_800 { font-weight: 800; }
+
+
+.text-spread {
+  font-size: 3.6rem;
+  line-height: 5rem;
+  text-align: justify;
+
+  @include tablet {
+    font-size: 3.6rem;
+    line-height: 5rem;
+    text-align: justify;
+  }
+}
+
+.text-blocks {
+  display: inline;
+  padding: 0.5em 0em;
+  background-color: #FA35;
+  box-shadow: 1em 0 0 #FA35, -1em 0 0 #FA35;
+  box-decoration-break: clone;
+}

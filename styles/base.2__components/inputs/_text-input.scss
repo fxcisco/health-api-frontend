@@ -1,0 +1,86 @@
+.text-input {
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+
+  input {
+    flex: 1 1 28rem;
+    margin: 0;
+    border: none;
+    border: 0;
+    background: none;
+    
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-align: inherit;
+
+    &::selection {
+      background: $primary;
+      color: white;
+    }
+
+    &::placeholder {
+      color: #777;
+    }
+  }
+
+  .text-label {
+    position: absolute;
+    top: -1.2rem;
+    right: 0;
+    color: #999;
+    font-size: 1.2rem;
+    opacity: 0;
+
+    transform: translateY(-1.2rem);
+    transition: 
+      opacity 0.4s ease-out,
+      transform 0.4s ease;
+
+    &.always {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .text-prefix {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+
+  &:focus-within {
+    .text-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: $primary;
+  font-family: $font-1 !important;
+
+  box-shadow: 0 0 0px 1000px #0be4 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #0be4 inset;
+}
+
+input:-webkit-autofill::selection,
+textarea:-webkit-autofill::selection {
+  -webkit-text-fill-color: white;
+  background-color: $primary;
+}

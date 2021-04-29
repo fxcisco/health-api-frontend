@@ -1,0 +1,67 @@
+.textarea-input {
+  flex: 1;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+
+  textarea {
+    width: 100%;
+    flex: 0 0 100%;
+    display: block;
+    padding-bottom: 1px;
+
+    margin: 0;
+    border: none;
+    border: 0;
+    background: none;
+    
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-align: inherit;
+
+    &::placeholder {
+      color: #777;
+    }
+
+    &::selection {
+      background: $primary;
+      color: white;
+    }
+  }
+
+  .text-label {
+    position: absolute;
+    top: -1.2rem;
+    right: 0;
+    color: #999;
+    font-size: 1.2rem;
+    opacity: 0;
+
+    transform: translateY(-1.2rem);
+    transition: 
+      opacity 0.4s ease-out,
+      transform 0.4s ease;
+  }
+  
+  .text-prefix {
+    margin-right: 1rem;
+  }
+
+  &:focus-within {
+    .text-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

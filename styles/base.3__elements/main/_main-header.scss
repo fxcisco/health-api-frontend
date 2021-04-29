@@ -1,0 +1,37 @@
+.main-header {
+  height: 5rem;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 115rem;
+    padding: 0 1.5rem;
+  }
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1300;
+
+  @include desksmall {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.logo-link {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: $font-2;
+  letter-spacing: 6px;
+  padding: 0;
+}

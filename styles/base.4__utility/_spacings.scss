@@ -1,0 +1,112 @@
+.res-padding {
+  padding: 0 2rem;
+  @include tablet {
+    padding: 0 1rem;
+  }
+}
+
+
+$size-list: 1rem 2rem 3rem 4rem 5rem;
+.p-0 { padding: 0; }
+// combo paddings
+@each $size in $size-list {
+  $i: index($size-list, $size);
+  .p-#{$i} {
+    padding: $size;
+  }
+
+  .py-#{$i} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+
+  .px-#{$i} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+}
+
+
+// single paddings
+@each $size in $size-list {
+  $i: index($size-list, $size);
+
+  .pyt-#{$i} {
+    padding-top: $size;
+  }
+
+  .pyb-#{$i} {
+    padding-bottom: $size;
+  }
+
+  .pxl-#{$i} {
+    padding-left: $size;
+  }
+
+  .pxr-#{$i} {
+    padding-right: $size;
+  }
+}
+
+
+
+.m-0 { margin: 0;}
+// combo margins
+@each $size in $size-list {
+  $i: index($size-list, $size);
+
+  .m-#{$i} {
+    margin: $size;
+  }
+
+  .my-#{$i} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  .mx-#{$i} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+}
+
+.mx-auto  { margin: 0 auto; }
+.mxl-auto { margin-left: auto; }
+.mxr-auto { margin-right: auto; }
+
+// single margins
+@each $size in $size-list {
+  $i: index($size-list, $size);
+
+  .myt-#{$i} {
+    margin-top: $size;
+  }
+
+  .myb-#{$i} {
+    margin-bottom: $size;
+  }
+
+  .mxl-#{$i} {
+    margin-left: $size;
+  }
+
+  .mxr-#{$i} {
+    margin-right: $size;
+  }
+}
+
+.max-40,
+.max-60,
+.max-80 {
+  width: 100%;
+  margin:  0 auto;
+}
+.max-40 {
+  max-width: 40rem;
+}
+.max-60 {
+  max-width: 60rem;
+}
+.max-80 {
+  max-width: 80rem;
+}

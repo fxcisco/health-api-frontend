@@ -1,0 +1,59 @@
+$full-screen: calc(100vh - 5rem);
+$left-offset: 5rem;
+$right-offset: 33.5rem;
+
+.site-layout{
+  width: 100%;
+  position: relative;
+  z-index: -1100;
+}
+
+.page-layout {
+  position: relative;
+  margin: 0 auto;
+  
+  width: 100%;
+  max-width: 115rem;
+  min-height: 100vh;
+  
+  padding: 0 1.5rem;
+  padding-top: 5rem;
+
+  padding-bottom: 15rem;
+  padding-bottom: 20vh;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background: transparent;
+  max-width: 115rem;
+}
+
+.w-sides {
+  display: grid;
+  grid-template-areas: 
+  "main main side"
+  "main main side"
+  "head head head";
+
+  .head-container{
+    grid-area: head;
+    height: 100%;
+  }
+  .container {
+    grid-area: main;
+  }
+  .side-container {
+    grid-area: side;
+    margin-left: 3rem;
+  }
+}
+
+.abs-center {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}

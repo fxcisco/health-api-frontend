@@ -1,0 +1,62 @@
+%sub-scrollbar {
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background:  #555;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+  }
+}
+
+
+.textarea {
+  width: 100%;
+  min-height: 10rem;
+  background-color: #232323;
+  color: #eee;
+  padding: 1rem;
+  white-space: nowrap;
+
+  border: none;
+  resize: vertical;
+  overflow-x: scroll;
+
+  @extend %sub-scrollbar;
+  &::-webkit-scrollbar-corner {
+    background-color: $primary;
+  }
+  &::-webkit-resizer {
+    background-color: $primary;
+  }
+
+  font-weight: bold;
+  font-family:  monospace, sans-serif;
+}
+
+.pre-tag {
+  background-color: #232323;
+  color: #eee;
+  padding: 1rem 1rem;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  max-height: calc(50vh);
+
+  -webkit-overflow-scrolling: touch;
+  white-space: pre;
+  word-wrap: normal;
+
+  font-weight: bold;
+  font-family:  monospace, sans-serif;
+
+
+  @extend %sub-scrollbar;
+  &::-webkit-scrollbar-corner {
+    background-color: #555;
+  }
+}

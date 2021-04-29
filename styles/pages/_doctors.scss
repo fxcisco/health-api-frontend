@@ -1,0 +1,138 @@
+$primary-blue: #467adb;
+$primary-light: #467adb99;
+
+
+.grid-doctors {
+  display: grid;
+  grid-template-columns: 30rem 8fr;
+}
+
+
+.doctors-side {
+  background-color: #f4f4f6;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    padding: 0 2rem;
+
+    h5 {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .site-brand-title {
+    min-height: 10rem;
+    padding: 2rem 0;
+    h1 {
+      text-transform: lowercase;
+      color: $primary-blue;
+      font-weight: bolder;
+    }
+  }
+
+  ul {
+    flex: 8;
+  }
+
+  .list-btn {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    padding-left: 2rem;
+    background: none;
+  
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      font-size: .6rem;
+    }
+  
+    &:hover {
+      background-color: #467adb50;
+    }
+  
+    &.active {
+      background-color: $primary-blue;
+  
+      span {
+        color: white;
+      }
+      
+      h5 {
+        color: white;
+      }
+    }
+  }
+
+  .actions-section {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-logout {
+      padding: .6rem 3rem;
+      background-color: $primary-blue;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 500;
+      border-radius: .5rem;
+
+      &:hover {
+        background-color: $primary-light;
+      }
+    }
+  }
+}
+
+.appointments-side {
+  padding: 0 1rem;
+}
+
+.header-appointments {
+  min-height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .header-content {
+    flex: 1;
+    padding: 2rem 1rem;
+  }
+}
+
+.table-appointments {
+  thead th {
+    background: $primary-blue !important;
+    color: white;
+    padding: 1rem 1rem;
+  }
+
+  tbody tr {
+    cursor: pointer;
+  }
+
+  tr td {
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+
+.appt-placeholder {
+  min-height: 40rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4rem;
+
+  h4 {
+    text-transform: uppercase;
+  }
+}

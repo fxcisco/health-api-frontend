@@ -1,0 +1,29 @@
+:root {
+  --main-color: #e98b2c;
+  --dark: #1b1b22;
+  --dark-light: #32323a;
+  --white: #fff;
+  --white-light: #c8c8c8;
+}
+
+body {
+  // font-size: 16px;
+  // line-height: 1.5;
+  // font-weight: 300;
+
+  color: var(--white-light);
+  background-color: var(--dark);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1170px;
+  background-color: red;
+  margin: auto;
+}

@@ -1,0 +1,49 @@
+.sub-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  &.right {
+    justify-content: flex-end;
+  }
+  &.left {
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    color: #477cc6;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    
+    .nav-item:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    .nav-item.active {
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+.pagination-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .btn {
+    flex: 1;
+    border-bottom: 2px solid transparent;
+  }
+
+  .btn-active {
+    border-bottom: 2px solid $primary;
+  }
+}

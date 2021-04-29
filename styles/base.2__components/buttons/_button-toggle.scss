@@ -1,0 +1,43 @@
+.btn-toggle {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  background: none;
+  
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2.8rem;
+    height: 2px;
+    background: #37a6ff;
+    
+    transition: 0.2s;
+    transform: translateY(.8rem);
+  }
+
+  &::before {
+    box-shadow: 0 .8rem 0 #37a6ff;
+    transform: translateY(-.8rem);
+  }
+
+  &.active {
+    &::after,
+    &::before {
+      background: #f7226a;
+    }
+
+    &::before {
+      box-shadow: 0 0 0 #f7226a;
+      transform: translateY(0) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+}

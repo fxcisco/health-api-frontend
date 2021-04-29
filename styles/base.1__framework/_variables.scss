@@ -1,0 +1,28 @@
+$header-height: 6rem;
+
+%scrollbar {  
+  &::-webkit-scrollbar {
+    width: .8rem;
+    height: 1rem;
+
+    @include tablet {
+      width: .6rem;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background:  #aaa;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    // background: $retro-6;
+    background: $secondary;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: $primary;
+  }
+  &::-webkit-resizer {
+    background-color: $primary;
+  }
+}

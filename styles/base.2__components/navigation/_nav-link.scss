@@ -1,0 +1,39 @@
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: .4rem 1rem;
+}
+
+.navigation-links {
+
+  .link-item-list {
+    display: flex;
+    align-items: center;
+
+    .link-item:not(:first-child) {
+      margin-left: 1rem;
+
+      @include mobile {
+        margin-left: .5rem;
+      }
+    }
+
+    .link-item {
+      font-size: 1.2rem;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        padding: .4rem 1rem;
+        color: #333;
+      }
+
+      .icon-link {
+        svg {
+          margin-right: .5rem;
+        }
+      }
+    }
+  }
+}
+

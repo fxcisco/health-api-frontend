@@ -1,0 +1,55 @@
+.page-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem auto;
+  width: 100%;
+  max-width: 50rem;
+
+  .btn-new {
+    color: #cb3131;
+    border: 2px solid #cb3131;
+  }
+  .btn-save {
+    background-color: $primary;
+    border: 2px solid $primary;
+    color: white;
+  }
+
+  .btn-new,
+  .btn-save {
+    padding: .6rem 3rem;
+  }
+}
+
+.page-actions {
+  border: 2px solid #ccc;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 1rem;
+  text-align: center;
+  
+  h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+
+
+  .link-btn-login {
+    padding: .6rem 3rem;
+    font-size: 2rem;
+    border: 2px solid #27699e;
+    text-transform: uppercase;
+    color: #27699e;
+
+    @include mobile {
+      font-size: 1.8rem;
+      width: 90%;
+    }
+  }
+}

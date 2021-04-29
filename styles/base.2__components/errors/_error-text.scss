@@ -1,0 +1,58 @@
+.error-text {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #cf2424;
+  padding: .5rem 2rem;
+  position: relative;
+  z-index: 0;
+  animation: fadeIn ease .5s;
+
+  p {
+    color: white;
+    font-weight: 400;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #cf2424;
+    z-index: -1;
+
+    animation: pulseOut ease 3s forwards;
+    pointer-events: none;
+  }
+}
+
+@keyframes pulseOut {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.2, 2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2, 2);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

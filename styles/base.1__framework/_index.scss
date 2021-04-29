@@ -1,0 +1,76 @@
+@import './medias';
+@import './mixins';
+@import './resets';
+@import './colors';
+@import './variables';
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html,
+body,
+#root,
+#__next {
+  width: 100%;
+  height: 100%;
+
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: -1200;
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow: overlay;
+
+  box-sizing: border-box;
+  @extend %scrollbar;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+svg { display:  inline-block; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+}
+
+button,
+textarea,
+input:not([type='checkbox']) {
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+  color: inherit;
+}
+
+input,
+textarea,
+select:focus {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+@import './typography/index';
+@import './images';
+@import './layout/index';

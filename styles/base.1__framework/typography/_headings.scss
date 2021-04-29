@@ -1,0 +1,49 @@
+.h1r {
+  font-size: 7rem;
+  @include desktop {
+    font-size: calc(3.2vw + 3.2rem);
+  }
+}
+.h2r {
+  font-size: 7rem;
+  @include desktop {
+    font-size: calc(3.2vw + 3.2rem);
+  }
+}
+.h3r {
+  font-size: 5.8rem;
+  @include desktop {
+    font-size: calc(2.6vw + 2.8rem);
+  }
+}
+.h4r {
+  font-size: 5.8rem;
+  @include desktop {
+    font-size: calc(2.6vw + 2.8rem);
+  }
+}
+.h5r {
+  font-size: 4.8rem;
+  @include desktop {
+    font-size: calc(2.2vw + 2.2rem);
+  }
+}
+.h6r {
+  font-size: 4.8rem;
+  @include desktop {
+    font-size: calc(2.2vw + 2.2rem);
+  }
+}
+.pr {
+  font-size: 1.9rem;
+}
+
+.h1r,.h3r,.h5r {
+  font-weight: 400;
+}
+.h2r,.h4r,.h6r {
+  font-weight: 300;
+}
+.h1r,.h2r,.h3r,.h4r,.h5r,.h6r {
+  line-height: 1.2;
+} 

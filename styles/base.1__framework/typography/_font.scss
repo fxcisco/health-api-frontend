@@ -1,0 +1,39 @@
+$font-1: 'Oswald',
+sans-serif;
+$font-2: 'Lato',
+sans-serif;
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h1,
+h3,
+h5 {
+  font-family: $font-1;
+  font-weight: 400;
+}
+
+h2,
+h4,
+h6 {
+  font-family: $font-2;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: $font-1;
+  font-weight: 300;
+  color: #444;
+}

@@ -1,0 +1,63 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f1f1f1;
+  padding: 0 1rem;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+td {
+  text-align: center;
+  vertical-align: center;
+  padding: 1rem .5rem;
+
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+th, td {
+  &.lg { max-width: 15rem; }
+  &.md { max-width: 10rem; }
+  &.sm { max-width: 5rem; }
+  &.xs { max-width: 1rem; }
+}
+
+
+.users-table {
+  th {
+    background-color: $primary;
+    color: white;
+
+    @include mobile {
+      font-size: 1.2rem;
+    }
+  }
+
+  th:not(.t-center),
+  td {
+    text-align: left;
+  }
+
+  td {
+    @include mobile {
+      font-size: 1.2rem;
+
+      &:first-child {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  td .btn {
+    padding: 1rem;
+    border: none;
+  }
+}

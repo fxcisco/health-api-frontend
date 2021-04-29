@@ -1,0 +1,106 @@
+.select-label {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.input-select {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #333;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 30rem;
+  select {
+    width: 100%;
+    min-height: 3.5rem;
+    border: 2px solid #333;
+    border-radius: 0;
+
+
+    outline: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+    font-size: 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+      border-color: #326bc6;
+      color: #104293;
+    }
+    &:hover {
+      background-color: #cbe7ff;
+    }
+  }
+
+
+  &::after {
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #222;
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    pointer-events: none;
+    border-radius: 2px;
+  }
+
+  .selector-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #222;
+    border-top: none;
+
+    .btn {
+      cursor: pointer;
+      width: 100%;
+      padding: .5rem 2rem;
+      text-align: left;
+      background: none;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      &:focus {
+        outline: 2px solid $secondary;
+        outline-offset: 2px;
+      }
+      &:hover {
+        outline: 2px solid $primary;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &.active {
+    .selector-options {
+      display: block;
+    }
+    .select-overlay {
+      display: block;
+    }
+  }
+}
+.select-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  display: none;
+}

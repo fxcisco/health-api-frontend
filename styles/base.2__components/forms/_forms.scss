@@ -1,0 +1,49 @@
+.form {
+  width: 100%;
+  margin: 0 auto;
+
+  .label {
+    font-size: 1.6rem;
+    font-weight: 100;
+  }
+
+  .text-input {
+    flex: 1;
+  }
+
+  input, textarea {
+    padding: .5rem;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  position: relative;
+
+  input, textarea {
+    flex: 0 0 100%;
+    border: 1px solid silver;
+    padding: .6rem 1rem;
+    resize: none;
+  }
+}
+
+.error-label {
+  color: red;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  position: absolute;
+  
+  top: .5rem;
+  right: 0;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}

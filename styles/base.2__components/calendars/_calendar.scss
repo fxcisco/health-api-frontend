@@ -1,0 +1,106 @@
+.calendar-table {
+  max-width: 60rem;
+  margin: 0 auto;
+
+  .table {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  td {
+    cursor: pointer;
+  }
+  h5 {
+    font-size: 1.8rem;
+  }
+
+  @include mobile {
+    th {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    td {
+      font-size: 1.4rem;
+    }
+
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
+
+  th {
+    background-color: $primary;
+    color: white;
+  }
+
+  .in-this-month {
+    background-color: white;
+    color: black;
+  }
+
+  .in-this-month:hover {
+    background-color: white;
+    color: $primary;
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  .today {
+    background-color: #ffc8df;
+    color: #000;
+  }
+  
+  .target {
+    background-color: $primary;
+    outline-offset: 2px;
+    color: white;
+
+    &:hover {
+      outline: 2px solid $primary;
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  .in-prev-month {
+    outline-offset: 2px;
+    background-color: #e0e0e0;
+    color: #555;
+
+    &:hover {
+      outline: 2px solid $secondary;
+      background-color: #a9b8dd;
+      color: white;
+    }
+
+    &.target {
+      background-color: #441f7c;
+      color: white;
+      &:hover {
+        outline: 2px solid #441f7c;
+        background-color: #441f7c;
+      }
+    }
+  }
+
+  .in-next-month {
+    outline-offset: 2px;
+    background-color: #e0e0e0;
+    color: #555;
+
+    &:hover {
+      outline: 2px solid $secondary;
+      background-color: #a9b8dd;
+      color: white;
+    }
+
+    &.target {
+      background-color: #1f437c;
+      color: white;
+      &:hover {
+        outline: 2px solid #1f437c;
+        background-color: #1f437c;
+      }
+    }
+  }
+}

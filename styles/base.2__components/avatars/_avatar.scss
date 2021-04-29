@@ -1,0 +1,17 @@
+.img-avatar {
+  width: 5rem;
+  height: 5rem;
+  
+  display: block;
+  object-fit: cover;
+  box-shadow: 2px 2px 5px #0003;
+}
+
+.img-avatar-round {
+  width: 5rem;
+  height: 5rem;
+
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}

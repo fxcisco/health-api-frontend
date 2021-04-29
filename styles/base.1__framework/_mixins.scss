@@ -1,0 +1,25 @@
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+
+@mixin no-select {
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+@mixin odd-x($name: '', $count: 0) {
+  @for $i from 1 through $count{
+    @if $i % 2 != 0 { 
+
+      .#{$name}#{$i} {
+        @content;
+      }
+    }
+  }
+}
